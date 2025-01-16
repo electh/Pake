@@ -1,7 +1,7 @@
 {
   "windows": [
     {
-      "url": "https://weread.qq.com",
+      "url": "https://nextflux.pages.dev/",
       "url_type": "web",
       "hide_title_bar": true,
       "fullscreen": false,
@@ -21,8 +21,8 @@
   },
   "system_tray": {
     "macos": false,
-    "linux": true,
-    "windows": true
+    "linux": false,
+    "windows": false
   },
   "system_tray_path": "icons/icon.png",
   "inject": [],

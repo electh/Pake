@@ -1,6 +1,6 @@
 {
-  "productName": "WeRead",
-  "identifier": "com.pake.weread",
+  "productName": "Reactflux",
+  "identifier": "com.pake.reactflux",
   "version": "1.0.0",
   "app": {
     "withGlobalTauri": true,

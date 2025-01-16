@@ -75,11 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  domEl.addEventListener('dblclick', () => {
-    appWindow.isFullscreen().then(fullscreen => {
-      appWindow.setFullscreen(!fullscreen);
-    });
-  });
+  // domEl.addEventListener('dblclick', () => {
+  //   appWindow.isFullscreen().then(fullscreen => {
+  //     appWindow.setFullscreen(!fullscreen);
+  //   });
+  // });
 
   if (window['pakeConfig']?.disabled_web_shortcuts !== true) {
     document.addEventListener('keyup', event => {

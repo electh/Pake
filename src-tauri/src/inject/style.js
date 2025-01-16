@@ -408,22 +408,24 @@ window.addEventListener('DOMContentLoaded', _event => {
       top: 28px;
     }
 
-    #pake-top-dom:active {
-      cursor: grabbing;
-      cursor: -webkit-grabbing;
-    }
-
     #pake-top-dom{
       position:fixed;
       background:transparent;
       top:0;
       width: 100%;
       height: 20px;
-      cursor: grab;
       -webkit-app-region: drag;
       user-select: none;
       -webkit-user-select: none;
       z-index: 99999;
+    }
+
+    .sidebar-header{
+      padding-top: 28px;
+    }
+
+    .article-list-header {
+      padding-top: 16px;
     }
 
     @media (max-width:767px){
@@ -433,6 +435,10 @@ window.addEventListener('DOMContentLoaded', _event => {
 
       #__next > div.overflow-hidden.w-full.h-full  main.relative.h-full.w-full.flex-1 > .flex-1.overflow-hidden .h-32.md\\:h-48.flex-shrink-0{
         height: 0px;
+      }
+
+      .action-buttons {
+        padding-left: 56px;
       }
     }
   `;

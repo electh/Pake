@@ -35,6 +35,7 @@ pub fn set_window(app: &mut App, config: &PakeConfig, tauri_config: &Config) -> 
         .resizable(window_config.resizable)
         .fullscreen(window_config.fullscreen)
         .inner_size(window_config.width, window_config.height)
+        .min_inner_size(400.0, 600.0)
         .always_on_top(window_config.always_on_top)
         .disable_drag_drop_handler()
         .initialization_script(&config_script)
