@@ -421,7 +421,7 @@ window.addEventListener('DOMContentLoaded', _event => {
     }
 
     .sidebar-header{
-      padding-top: 28px;
+      padding-top: 25px;
     }
 
     .article-list-header {
