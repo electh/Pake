@@ -2,6 +2,7 @@ use crate::app::config::PakeConfig;
 use crate::util::get_data_dir;
 use std::{path::PathBuf, str::FromStr};
 use tauri::{App, Config, Url, WebviewUrl, WebviewWindow, WebviewWindowBuilder};
+use tauri::window::{EffectsBuilder, Effect};
 
 #[cfg(target_os = "macos")]
 use tauri::{Theme, TitleBarStyle};
@@ -28,6 +29,10 @@ pub fn set_window(app: &mut App, config: &PakeConfig, tauri_config: &Config) -> 
         serde_json::to_string(&window_config).unwrap()
     );
 
+    let effects = EffectsBuilder::new()
+        .effects(vec![Effect::Sidebar, Effect::HudWindow])
+        .build();
+
     let mut window_builder = WebviewWindowBuilder::new(app, "pake", url)
         .title("")
         .visible(false)
@@ -36,6 +41,8 @@ pub fn set_window(app: &mut App, config: &PakeConfig, tauri_config: &Config) -> 
         .fullscreen(window_config.fullscreen)
         .inner_size(window_config.width, window_config.height)
         .min_inner_size(400.0, 600.0)
+        .transparent(true)
+        .effects(effects)
         .always_on_top(window_config.always_on_top)
         .disable_drag_drop_handler()
         .initialization_script(&config_script)
@@ -70,5 +77,7 @@ pub fn set_window(app: &mut App, config: &PakeConfig, tauri_config: &Config) -> 
             .title(app.package_info().name.clone());
     }
 
-    window_builder.build().expect("Failed to build window")
+    let window = window_builder.build().expect("Failed to build window");
+
+    window
 }

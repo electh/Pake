@@ -1,6 +1,6 @@
 {
   "bundle": {
-    "icon": ["icons/reactflux.icns"],
+    "icon": ["icons/nextflux.icns"],
     "active": true,
     "macOS": {},
     "targets": ["dmg"]

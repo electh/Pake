@@ -420,12 +420,25 @@ window.addEventListener('DOMContentLoaded', _event => {
       z-index: 99999;
     }
 
+    html, body {
+      background: transparent !important;
+    }
+
+    html {
+      border:1px solid rgba(255, 255, 255, 0.2);
+      border-radius:10px
+    }
+
+    .indicator {
+      margin-top: 76px;
+    }
+
     .sidebar-header{
       padding-top: 25px;
     }
 
     .article-list-header {
-      padding-top: 16px;
+      padding-top: 25px;
     }
 
     @media (max-width:767px){

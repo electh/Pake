@@ -1,9 +1,10 @@
 {
-  "productName": "Reactflux",
-  "identifier": "com.pake.reactflux",
+  "productName": "Nextflux",
+  "identifier": "com.pake.nextflux",
   "version": "1.0.0",
   "app": {
     "withGlobalTauri": true,
+    "macOSPrivateApi": true,
     "trayIcon": {
       "iconPath": "png/weread_512.png",
       "iconAsTemplate": false,
