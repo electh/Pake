@@ -425,7 +425,7 @@ window.addEventListener('DOMContentLoaded', _event => {
     }
 
     html {
-      border:1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.2);
       border-radius:10px
     }
 
