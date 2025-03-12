@@ -429,6 +429,10 @@ window.addEventListener('DOMContentLoaded', _event => {
       border-radius:10px
     }
 
+    .audio-player-controls {
+      background-color: hsl(var(--heroui-content1)) !important;
+    }
+
     .indicator {
       margin-top: 76px;
     }
